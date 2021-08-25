@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Subee</string>
+    <string name="sub_name">Название подписки</string>
+    <string name="sub_desc">Описание </string>
+    <string name="sub_price">Стоимость $ </string>
+    <string name="button_add">Добавить </string>
+    <string name="button_update">Обновить </string>
+
+
+
+</resources>
