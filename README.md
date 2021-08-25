@@ -16,7 +16,7 @@ Easily manage your service subscriptions with the Subee app.
 - Kotlin
 - Material Components for Android
 - Room
-- Android Components (Navigation, LiveData, View Model)
+- Android Architecture Components (Navigation, LiveData, View Model)
 - MVVM
 - Coroutines
 - Figma (design)
