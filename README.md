@@ -1,17 +1,20 @@
 # Subee App for Android
 
-Easily manage your service subscriptions with the Subee app.
-
 ![Alt Text](https://github.com/skreep1/SubeeApp/blob/master/postmain.png)
 
-# Subee 1.0 (Current version)
+# Описание
+<b>Subee</b> - удобное мобильное приложение с помощью которого вы можете легко управлять своими подписками на сервисы. Главная цель проекта не только упростить жизнь пользователям, но и ознакомиться с новыми технологиями для разработки мобильных приложений.
 
-- Follow Subscriptions
-- Add new Subscription
-- Update Subscription
-- Delete Subscription
 
-# Technology
+# Subee 1.0. Какие функции?
+
+- Хранить все подписки в одном приложение 
+- Добавлять новые подписки
+- Обновлять подписки
+- Удалять подписки
+
+
+# Используемые технологии
 
 - Kotlin
 - Material Components for Android
@@ -21,8 +24,7 @@ Easily manage your service subscriptions with the Subee app.
 - Coroutines
 - Figma (design)
 
-# Donate
-How to give thanks?
-You can subscribe to my social networks:
+# Социальные сети
+Вы можете подписать на мои социальные сети :)
 1. [Instagram](http://instagram.com/skreep1/ "Instagram") 
 2. [Linkedin](https://www.linkedin.com/in/skreep/ "Linkedin")
