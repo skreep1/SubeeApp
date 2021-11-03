@@ -17,7 +17,6 @@
 # Используемые технологии
 
 - Kotlin
-- Material Components for Android
 - Room
 - Android Architecture Components (Navigation, LiveData, View Model)
 - MVVM
@@ -25,7 +24,7 @@
 - Figma (design)
 
 # Социальные сети
-Вы можете подписать на мои социальные сети :)
+Вы можете подписать на мои социальные сети 
 1. [Instagram](http://instagram.com/skreep1/ "Instagram") 
 2. [Linkedin](https://www.linkedin.com/in/skreep/ "Linkedin")
 
