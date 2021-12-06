@@ -16,8 +16,6 @@ import kotlinx.android.synthetic.main.fragment_update.*
 import kotlinx.android.synthetic.main.fragment_update.view.*
 
 
-/** Класс для обновления/испраления подписки */
-
 class UpdateFragment : Fragment() {
 
     private val args by navArgs<UpdateFragmentArgs>()
@@ -101,9 +99,9 @@ class UpdateFragment : Fragment() {
             findNavController().navigate(R.id.action_updateFragment_to_listFragment)
 
         }
-        builder.setNegativeButton("Нет") { _, _ ->}
-            builder.setTitle("Удалить ${args.currentSub.nameSub}?")
-            builder.setMessage("Вы уверены, что хотите удалить ${args.currentSub.nameSub}")
-            builder.create().show()
-        }
+        builder.setNegativeButton("Нет") { _, _ -> }
+        builder.setTitle("Удалить ${args.currentSub.nameSub}?")
+        builder.setMessage("Вы уверены, что хотите удалить ${args.currentSub.nameSub}")
+        builder.create().show()
     }
+}

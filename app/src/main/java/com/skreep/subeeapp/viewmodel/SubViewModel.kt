@@ -11,9 +11,6 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
 
-/** ViewModel действует как коммуникация между репозиторием и UI
- * Цель ViewModel - доставлять данные UI и сохранять изменения */
-
 class SubViewModel(application: Application) : AndroidViewModel(application) {
 
     val readAllData: LiveData<List<Subscription>>
@@ -42,6 +39,6 @@ class SubViewModel(application: Application) : AndroidViewModel(application) {
             repository.deleteSub(subscription)
         }
 
-        }
-
     }
+
+}
