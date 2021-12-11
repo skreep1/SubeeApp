@@ -5,6 +5,9 @@
     <string name="sub_price">Стоимость $ </string>
     <string name="button_add">Добавить </string>
     <string name="button_update">Обновить </string>
+    <string name="add_new_subscribe">Добавить новую подписку </string>
+    <string name="update_subscribe">Обновить или удалить подписку</string>
+
 
 
 

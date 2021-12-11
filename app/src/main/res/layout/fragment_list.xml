@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragments.list.ListFragment"
-    >
+    tools:context=".fragments.list.ListFragment">
+
 
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -14,10 +14,11 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="30dp"
         android:layout_marginBottom="20dp"
-        android:backgroundTint="@color/background_two"
+        android:backgroundTint="@color/dark_color"
         android:clickable="true"
-        app:backgroundTint="@color/background_two"
+        app:tint="@color/white"
         android:src="@drawable/ic_add"
+        app:backgroundTint="@color/background_two"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
@@ -25,9 +26,9 @@
         android:id="@+id/recycler"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginEnd="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:listitem="@layout/item_rv" />
 </androidx.constraintlayout.widget.ConstraintLayout>

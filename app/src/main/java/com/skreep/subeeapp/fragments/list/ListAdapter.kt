@@ -1,15 +1,16 @@
 package com.skreep.subeeapp.fragments.list
 
-import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.skreep.subeeapp.R
+import com.skreep.subeeapp.databinding.ItemRvBinding
 import com.skreep.subeeapp.model.Subscription
-import jahirfiquitiva.libs.textdrawable.TextDrawable
+import com.skreep.subeeapp.viewmodel.SubViewModel
+import kotlinx.android.synthetic.main.fragment_add.*
+import kotlinx.android.synthetic.main.fragment_list.view.*
 import kotlinx.android.synthetic.main.item_rv.view.*
 
 class ListAdapter:RecyclerView.Adapter<ListAdapter.MyViewHolder>() {
@@ -35,6 +36,7 @@ class ListAdapter:RecyclerView.Adapter<ListAdapter.MyViewHolder>() {
             val action = ListFragmentDirections.actionListFragmentToUpdateFragment(currentItem)
             holder.itemView.findNavController().navigate(action)
         }
+
     }
 
     override fun getItemCount(): Int {
@@ -45,4 +47,6 @@ class ListAdapter:RecyclerView.Adapter<ListAdapter.MyViewHolder>() {
         this.subList = subscription
         notifyDataSetChanged()
     }
-}
+
+
+    }

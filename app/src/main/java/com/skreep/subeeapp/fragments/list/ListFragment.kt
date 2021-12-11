@@ -1,21 +1,15 @@
 package com.skreep.subeeapp.fragments.list
 
-import android.graphics.Color
 import android.os.Bundle
 import android.view.*
-import android.widget.ImageView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.skreep.subeeapp.R
-import com.skreep.subeeapp.databinding.FragmentListBinding
 import com.skreep.subeeapp.viewmodel.SubViewModel
-import jahirfiquitiva.libs.textdrawable.TextDrawable
-import jahirfiquitiva.libs.textdrawable.TextDrawable.Companion.buildRect
 import kotlinx.android.synthetic.main.fragment_list.view.*
-import kotlinx.android.synthetic.main.item_rv.view.*
 
 
 class ListFragment : Fragment() {
@@ -33,7 +27,6 @@ class ListFragment : Fragment() {
         }
 
 
-
         //добавить меню
         setHasOptionsMenu(true)
 
@@ -48,6 +41,7 @@ class ListFragment : Fragment() {
         mSubViewModel.readAllData.observe(viewLifecycleOwner, Observer { sub ->
             adapter.setData(sub)
         })
+
 
         return view
     }

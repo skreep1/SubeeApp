@@ -8,19 +8,34 @@
     android:background="@color/background_one"
     tools:context=".fragments.add.AddFragment">
 
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/materialTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="128dp"
+        android:textStyle="bold"
+        android:text="@string/add_new_subscribe"
+        android:textColor="@color/black"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/name_et"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints">
+
+    </com.google.android.material.textview.MaterialTextView>
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/name_et"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="192dp"
-        android:fontFamily="@font/nunito"
+        android:layout_marginTop="60dp"
         android:hint="@string/sub_name"
         android:inputType="textPersonName"
         android:textColor="@color/gray_color"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/materialTextView"
         tools:ignore="MissingConstraints" />
 
     <com.google.android.material.textfield.TextInputEditText
@@ -29,7 +44,6 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="20dp"
-        android:fontFamily="@font/nunito"
         android:hint="@string/sub_desc"
         android:textColor="@color/gray_color"
         app:layout_constraintStart_toStartOf="parent"
@@ -41,7 +55,6 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="20dp"
-        android:fontFamily="@font/nunito"
         android:hint="@string/sub_price"
         android:inputType="number"
         android:textColor="@color/gray_color"
@@ -54,10 +67,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
         android:backgroundTint="@color/dark_color"
-        android:fontFamily="@font/nunito"
-        app:cornerRadius="0dp"
-        android:textColor="@color/background_two"
         android:text="@string/button_add"
+        android:textColor="@color/background_two"
+        app:cornerRadius="0dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/price_et" />
