@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Subee</string>
+    <string name="sub_name">Subscribe</string>
+    <string name="sub_desc">Description </string>
+    <string name="sub_price">Price $ </string>
+    <string name="button_add">Add Subscribe </string>
+    <string name="button_update">Refresh </string>
+    <string name="add_new_subscribe">Add new subscription</string>
+    <string name="update_subscribe">Renew or remove subscription</string>
+
+
+
+
+</resources>

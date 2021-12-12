@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Subee</string>
+    <string name="sub_name">Назва підписки</string>
+    <string name="sub_desc">Опис </string>
+    <string name="sub_price">Вартість $ </string>
+    <string name="button_add">Додати </string>
+    <string name="button_update">Обновити </string>
+    <string name="add_new_subscribe">Додати нову підписку</string>
+    <string name="update_subscribe">Оновити або видалити підписки</string>
+
+
+
+
+</resources>
