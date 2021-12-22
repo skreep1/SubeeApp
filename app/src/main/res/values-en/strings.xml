@@ -7,6 +7,10 @@
     <string name="button_update">Refresh </string>
     <string name="add_new_subscribe">Add new subscription</string>
     <string name="update_subscribe">Renew or remove subscription</string>
+    <string name="search_subscribe">Search</string>
+    <string name="swipe_up">Swipe Up</string>
+    <string name="new_subscribe">New Subscribe</string>
+    <string name="button_delete">Delete</string>
 
 
 

@@ -39,6 +39,9 @@ class UpdateFragment : Fragment() {
         view.button_update.setOnClickListener {
             updateSub()
         }
+        view.delete_img.setOnClickListener {
+            deleteSub()
+        }
 
         //добавлени меню
         setHasOptionsMenu(true)
@@ -75,17 +78,18 @@ class UpdateFragment : Fragment() {
         return !(TextUtils.isEmpty(name) && TextUtils.isEmpty(desc) && price.isEmpty())
     }
 
-    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
-        inflater.inflate(R.menu.delete_menu, menu)
-    }
+//    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+//        inflater.inflate(R.menu.delete_menu, menu)
+//    }
+//
+//    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+//        if (item.itemId == R.id.delete_menu) {
+//            deleteSub()
+//        }
+//
+//        return super.onOptionsItemSelected(item)
+//    }
 
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        if (item.itemId == R.id.delete_menu) {
-            deleteSub()
-        }
-
-        return super.onOptionsItemSelected(item)
-    }
 
     private fun deleteSub() {
         val builder = AlertDialog.Builder(requireContext())

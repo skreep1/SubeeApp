@@ -7,6 +7,10 @@
     <string name="button_update">Обновити </string>
     <string name="add_new_subscribe">Додати нову підписку</string>
     <string name="update_subscribe">Оновити або видалити підписки</string>
+    <string name="search_subscribe">Пошукк</string>
+    <string name="swipe_up">Змахніть вгору</string>
+    <string name="new_subscribe">Нова підписка</string>
+    <string name="button_delete">Видалити</string>
 
 
 

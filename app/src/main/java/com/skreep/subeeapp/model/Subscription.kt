@@ -12,5 +12,6 @@ data class Subscription(
         val id: Int,
         val nameSub: String,
         val descSub: String,
-        val priceSub: String
+        val priceSub: String,
+
 ): Parcelable

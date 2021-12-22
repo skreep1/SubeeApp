@@ -3,26 +3,32 @@ package com.skreep.subeeapp.fragments.list
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Filter
+import android.widget.Filterable
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
+import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.skreep.subeeapp.R
 import com.skreep.subeeapp.databinding.ItemRvBinding
 import com.skreep.subeeapp.model.Subscription
 import com.skreep.subeeapp.viewmodel.SubViewModel
-import kotlinx.android.synthetic.main.fragment_add.*
 import kotlinx.android.synthetic.main.fragment_list.view.*
 import kotlinx.android.synthetic.main.item_rv.view.*
+import java.util.*
+import kotlin.collections.ArrayList
 
-class ListAdapter:RecyclerView.Adapter<ListAdapter.MyViewHolder>() {
+class ListAdapter : RecyclerView.Adapter<ListAdapter.MyViewHolder>() {
 
     private var subList = emptyList<Subscription>()
 
-    class MyViewHolder(itemView: View):RecyclerView.ViewHolder(itemView) {
+    class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
-        return MyViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.item_rv, parent, false))
+        return MyViewHolder(
+            LayoutInflater.from(parent.context).inflate(R.layout.item_rv, parent, false)
+        )
     }
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
@@ -37,6 +43,7 @@ class ListAdapter:RecyclerView.Adapter<ListAdapter.MyViewHolder>() {
             holder.itemView.findNavController().navigate(action)
         }
 
+
     }
 
     override fun getItemCount(): Int {
@@ -49,4 +56,7 @@ class ListAdapter:RecyclerView.Adapter<ListAdapter.MyViewHolder>() {
     }
 
 
-    }
+
+}
+
+

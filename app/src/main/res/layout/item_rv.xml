@@ -9,7 +9,7 @@
 
 
     <View
-        android:id="@+id/view"
+        android:id="@+id/swipe_view"
         android:layout_width="5dp"
         android:layout_height="40dp"
         android:layout_marginStart="16dp"
@@ -29,6 +29,7 @@
         android:layout_marginBottom="20dp"
         android:text="Подпискана Neftlix"
         android:textSize="12sp"
+        app:fontFamily="@font/nunito"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="MissingConstraints">
@@ -45,9 +46,10 @@
         android:text="Netflix"
         android:textColor="@color/dark_color"
         android:textSize="14sp"
+        app:fontFamily="@font/nunito_bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/view"
+        app:layout_constraintTop_toTopOf="@+id/swipe_view"
         tools:ignore="MissingConstraints">
 
     </com.google.android.material.textview.MaterialTextView>
@@ -61,6 +63,7 @@
         android:text="14"
         android:textColor="@color/dark_color"
         android:textSize="14sp"
+        app:fontFamily="@font/nunito_bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         tools:ignore="MissingConstraints">
