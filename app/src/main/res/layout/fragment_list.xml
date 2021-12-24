@@ -24,22 +24,6 @@
 
     </com.google.android.material.textview.MaterialTextView>
 
-<!--    <com.google.android.material.textview.MaterialTextView-->
-<!--        android:id="@+id/total_tv"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginTop="16dp"-->
-<!--        android:text="1234"-->
-<!--        android:textColor="@color/dark_color"-->
-<!--        android:textSize="40sp"-->
-<!--        android:textStyle="bold"-->
-<!--        app:layout_constraintBottom_toTopOf="@+id/recycler"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toTopOf="parent"-->
-<!--        tools:ignore="MissingConstraints">-->
-
-<!--    </com.google.android.material.textview.MaterialTextView>-->
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler"
@@ -170,17 +154,6 @@
 
 
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
-
-    <!--    <androidx.coordinatorlayout.widget.CoordinatorLayout-->
-    <!--        android:id="@+id/cord"-->
-    <!--        android:layout_width="match_parent"-->
-    <!--        android:layout_height="match_parent"-->
-    <!--        tools:context=".MainActivity">-->
-
-
-    <!--        <include layout="@layout/item_bottom" />-->
-
-    <!--    </androidx.coordinatorlayout.widget.CoordinatorLayout>-->
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

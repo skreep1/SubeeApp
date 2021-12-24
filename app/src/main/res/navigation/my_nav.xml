@@ -48,6 +48,7 @@
         tools:layout="@layout/fragment_get_start" >
         <action
             android:id="@+id/action_getStartFragment_to_listFragment"
-            app:destination="@id/listFragment" />
+            app:destination="@id/listFragment"
+            app:enterAnim="@anim/slide_in_up" />
     </fragment>
 </navigation>
