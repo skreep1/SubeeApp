@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/my_nav"
-    app:startDestination="@id/listFragment">
+    app:startDestination="@id/getStartFragment">
 
     <fragment
         android:id="@+id/listFragment"
@@ -40,5 +40,14 @@
         <argument
             android:name="currentSub"
             app:argType="com.skreep.subeeapp.model.Subscription" />
+    </fragment>
+    <fragment
+        android:id="@+id/getStartFragment"
+        android:name="com.skreep.subeeapp.fragments.start.GetStartFragment"
+        android:label="fragment_get_start"
+        tools:layout="@layout/fragment_get_start" >
+        <action
+            android:id="@+id/action_getStartFragment_to_listFragment"
+            app:destination="@id/listFragment" />
     </fragment>
 </navigation>

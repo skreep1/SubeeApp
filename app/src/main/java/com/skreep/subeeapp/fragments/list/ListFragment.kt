@@ -20,7 +20,6 @@ import kotlinx.android.synthetic.main.item_bottom.*
 class ListFragment : Fragment() {
 
     private lateinit var mSubViewModel: SubViewModel
-    private lateinit var listBinding: FragmentListBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -31,16 +30,6 @@ class ListFragment : Fragment() {
         view.button_add.setOnClickListener {
             insertDataToDatabase()
         }
-
-
-
-//        val modalBottomSheet = BottomFragment()
-//        modalBottomSheet.show(supportFragmentManager, BottomFragment.TAG)
-
-//
-//       view.cord.setOnClickListener {
-//           Toast.makeText(requireContext(), "Подписка добавлена", Toast.LENGTH_LONG).show()
-//       }
 
 
         //добавить меню
@@ -89,7 +78,6 @@ class ListFragment : Fragment() {
     private fun inputCheck(name: String, desc: String, price: String): Boolean {
         return !(TextUtils.isEmpty(name) && TextUtils.isEmpty(desc) && price.isEmpty())
     }
-
 
 
 }

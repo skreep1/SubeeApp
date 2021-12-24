@@ -11,6 +11,9 @@
     <string name="swipe_up">Змахніть вгору</string>
     <string name="new_subscribe">Нова підписка</string>
     <string name="button_delete">Видалити</string>
+    <string name="button_get">Почати</string>
+    <string name="text_welcome">Ласкаво просимо!</string>
+    <string name="text_description_start">Легко керуйте своїми підписками на сервіси</string>
 
 
 

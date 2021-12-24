@@ -11,6 +11,9 @@
     <string name="swipe_up">Swipe Up</string>
     <string name="new_subscribe">New Subscribe</string>
     <string name="button_delete">Delete</string>
+    <string name="button_get">Get Start</string>
+    <string name="text_welcome">Welcome!</string>
+    <string name="text_description_start">Easily manage your service subscriptions</string>
 
 
 
