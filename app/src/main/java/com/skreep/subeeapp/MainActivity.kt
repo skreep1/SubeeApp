@@ -3,48 +3,17 @@ package com.skreep.subeeapp
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.navigation.findNavController
-import com.google.android.material.bottomsheet.BottomSheetBehavior
-
+import com.skreep.subeeapp.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
-
+    private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-
-
-
-
-//
-//        val modalBottomSheet = BottomFragment()
-//        modalBottomSheet.show(supportFragmentManager, BottomFragment.TAG)
-
-
-//        bottomSheetBehavior = BottomSheetBehavior.from<ConstraintLayout>(persistent_bottom_sheet)
-//
-//        bottomSheetBehavior.addBottomSheetCallback(object :
-//            BottomSheetBehavior.BottomSheetCallback() {
-//            override fun onStateChanged(bottomSheet: View, newState: Int) {
-//
-//            }
-//
-//
-//            override fun onSlide(bottomSheet: View, slideOffset: Float) {
-//            }
-//
-//        })
-
-//        if(savedInstanceState == null) {
-//            supportFragmentManager.beginTransaction()
-//                .add(R.id.fragment, BottomFragment::class.java, null)
-//                .show(BottomFragment())
-//                .commit()
-//        }
-
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
     }
 

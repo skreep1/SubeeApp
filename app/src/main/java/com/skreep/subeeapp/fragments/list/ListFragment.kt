@@ -1,34 +1,35 @@
 package com.skreep.subeeapp.fragments.list
 
 import android.os.Bundle
-import android.text.TextUtils
 import android.view.*
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.skreep.subeeapp.R
+import com.skreep.subeeapp.databinding.FragmentAddBinding
 import com.skreep.subeeapp.databinding.FragmentListBinding
-import com.skreep.subeeapp.model.Subscription
 import com.skreep.subeeapp.viewmodel.SubViewModel
-import kotlinx.android.synthetic.main.fragment_list.view.*
-import kotlinx.android.synthetic.main.fragment_list.view.button_add
-import kotlinx.android.synthetic.main.item_bottom.*
+
+
 
 
 class ListFragment : Fragment() {
+    private var _binding: FragmentListBinding? = null
+    private val binding get() = _binding!!
 
     private lateinit var mSubViewModel: SubViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?,
-    ): View? {
-        val view = inflater.inflate(R.layout.fragment_list, container, false)
+    ): View {
+        _binding = FragmentListBinding.inflate(inflater, container,false)
+        val view = binding.root
 
-        view.button_add.setOnClickListener {
-            insertDataToDatabase()
+        binding.floating.setOnClickListener {
+            findNavController().navigate(R.id.action_listFragment_to_addFragment)
         }
 
 
@@ -37,7 +38,7 @@ class ListFragment : Fragment() {
 
         //recyclerView
         val adapter = ListAdapter()
-        val recyclerview = view.recycler
+        val recyclerview = binding.recycler
         recyclerview.adapter = adapter
         recyclerview.layoutManager = LinearLayoutManager(requireContext())
 
@@ -52,33 +53,6 @@ class ListFragment : Fragment() {
 
 
     }
-
-    private fun insertDataToDatabase() {
-        val name = name_et.text.toString()
-        val desc = desc_et.text.toString()
-        val price = price_et.text.toString()
-
-        if (inputCheck(name, desc, price)) {
-
-            //создание sub обьекта
-            val sub = Subscription(0, name, desc, price)
-
-            //добавление в БД
-            mSubViewModel.addSub(sub)
-
-            Toast.makeText(requireContext(), "Подписка добавлена", Toast.LENGTH_LONG).show()
-            //кнопка назад
-            //findNavController().navigate(R.id.action_addFragment_to_listFragment)
-
-        } else {
-            Toast.makeText(requireContext(), "Заполните все поля", Toast.LENGTH_LONG).show()
-        }
-    }
-
-    private fun inputCheck(name: String, desc: String, price: String): Boolean {
-        return !(TextUtils.isEmpty(name) && TextUtils.isEmpty(desc) && price.isEmpty())
-    }
-
 
 }
 

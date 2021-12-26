@@ -10,37 +10,41 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.skreep.subeeapp.R
+import com.skreep.subeeapp.databinding.FragmentAddBinding
+import com.skreep.subeeapp.databinding.FragmentUpdateBinding
 import com.skreep.subeeapp.model.Subscription
 import com.skreep.subeeapp.viewmodel.SubViewModel
-import kotlinx.android.synthetic.main.fragment_update.*
-import kotlinx.android.synthetic.main.fragment_update.view.*
+
 
 
 class UpdateFragment : Fragment() {
 
     private val args by navArgs<UpdateFragmentArgs>()
-
     private lateinit var mSubViewModel: SubViewModel
+    private var _binding: FragmentUpdateBinding? = null
+    private val binding get() = _binding!!
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?,
     ): View? {
         // Inflate the layout for this fragment
-        val view = inflater.inflate(R.layout.fragment_update, container, false)
+        _binding = FragmentUpdateBinding.inflate(inflater, container,false)
+        val view = binding.root
 
         mSubViewModel = ViewModelProvider(this).get(SubViewModel::class.java)
 
+        with(binding){
+       updateNameEt.setText(args.currentSub.nameSub)
+        updateDescEt.setText(args.currentSub.descSub)
+        updatePriceEt.setText(args.currentSub.priceSub)
 
-        view.updateName_et.setText(args.currentSub.nameSub)
-        view.updateDesc_et.setText(args.currentSub.descSub)
-        view.updatePrice_et.setText(args.currentSub.priceSub)
-
-        view.button_update.setOnClickListener {
+       buttonUpdate.setOnClickListener {
             updateSub()
         }
-        view.delete_img.setOnClickListener {
+        deleteImg.setOnClickListener {
             deleteSub()
+        }
         }
 
         //добавлени меню
@@ -52,9 +56,9 @@ class UpdateFragment : Fragment() {
     /** Функция для обновления подписок в БД */
 
     private fun updateSub() {
-        val nameSub = updateName_et.text.toString()
-        val descSub = updateDesc_et.text.toString()
-        val priceSub = updatePrice_et.text.toString()
+        val nameSub = binding.updateNameEt.text.toString()
+        val descSub = binding.updateDescEt.text.toString()
+        val priceSub = binding.updatePriceEt.text.toString()
 
         if (inputCheck(nameSub, descSub, priceSub)) {
             //добавление обьекта
@@ -78,17 +82,17 @@ class UpdateFragment : Fragment() {
         return !(TextUtils.isEmpty(name) && TextUtils.isEmpty(desc) && price.isEmpty())
     }
 
-//    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
-//        inflater.inflate(R.menu.delete_menu, menu)
-//    }
-//
-//    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-//        if (item.itemId == R.id.delete_menu) {
-//            deleteSub()
-//        }
-//
-//        return super.onOptionsItemSelected(item)
-//    }
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        inflater.inflate(R.menu.delete_menu, menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        if (item.itemId == R.id.delete_menu) {
+            deleteSub()
+        }
+
+        return super.onOptionsItemSelected(item)
+    }
 
 
     private fun deleteSub() {
