@@ -78,7 +78,7 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/button_update"
-        android:layout_width="160dp"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginTop="64dp"
@@ -91,19 +91,19 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/updatePrice_et" />
 
-    <ImageView
-        android:id="@+id/delete_img"
-        android:layout_width="wrap_content"
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_delete"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="340dp"
         android:layout_marginTop="32dp"
-        android:layout_marginEnd="47dp"
-        android:src="@drawable/ic_delete"
+        android:backgroundTint="@color/red_color"
+        android:text="@string/button_delete"
+        android:textColor="@color/white"
+        app:cornerRadius="15dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/button_update" />
 
-    </ImageView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

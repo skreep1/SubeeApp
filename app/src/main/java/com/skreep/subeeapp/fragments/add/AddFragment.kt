@@ -26,7 +26,6 @@ class AddFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?,
     ): View? {
-        // Inflate the layout for this fragment
 
         _binding = FragmentAddBinding.inflate(inflater, container,false)
         val view = binding.root
@@ -35,6 +34,10 @@ class AddFragment : Fragment() {
 
         binding.buttonAdd.setOnClickListener {
             insertDataToDatabase()
+        }
+
+        binding.buttonCancel.setOnClickListener {
+            findNavController().navigate(R.id.action_addFragment_to_listFragment)
         }
 
         return view

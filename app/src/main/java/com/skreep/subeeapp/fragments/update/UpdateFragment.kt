@@ -16,7 +16,6 @@ import com.skreep.subeeapp.model.Subscription
 import com.skreep.subeeapp.viewmodel.SubViewModel
 
 
-
 class UpdateFragment : Fragment() {
 
     private val args by navArgs<UpdateFragmentArgs>()
@@ -29,22 +28,22 @@ class UpdateFragment : Fragment() {
         savedInstanceState: Bundle?,
     ): View? {
         // Inflate the layout for this fragment
-        _binding = FragmentUpdateBinding.inflate(inflater, container,false)
+        _binding = FragmentUpdateBinding.inflate(inflater, container, false)
         val view = binding.root
 
         mSubViewModel = ViewModelProvider(this).get(SubViewModel::class.java)
 
-        with(binding){
-       updateNameEt.setText(args.currentSub.nameSub)
-        updateDescEt.setText(args.currentSub.descSub)
-        updatePriceEt.setText(args.currentSub.priceSub)
+        with(binding) {
+            updateNameEt.setText(args.currentSub.nameSub)
+            updateDescEt.setText(args.currentSub.descSub)
+            updatePriceEt.setText(args.currentSub.priceSub)
 
-       buttonUpdate.setOnClickListener {
-            updateSub()
-        }
-        deleteImg.setOnClickListener {
-            deleteSub()
-        }
+            buttonUpdate.setOnClickListener {
+                updateSub()
+            }
+            binding.buttonDelete.setOnClickListener {
+                deleteSub()
+            }
         }
 
         //добавлени меню
