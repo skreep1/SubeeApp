@@ -27,7 +27,7 @@ abstract class SubDatabase : RoomDatabase() {
             val instance = Room.databaseBuilder(
                 context.applicationContext,
                 SubDatabase::class.java,
-                "subscription_database"
+                "table_my_sub"
             ).build()
             INSTANCE = instance
             return instance

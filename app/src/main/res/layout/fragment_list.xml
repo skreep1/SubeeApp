@@ -4,21 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
     tools:context=".fragments.list.ListFragment">
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/floating"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="30dp"
-        app:tint="@color/background_one"
-        android:layout_marginBottom="20dp"
-        android:backgroundTint="@color/dark_color"
-        android:clickable="true"
-        android:src="@drawable/ic_add"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/app_name_tv"
@@ -36,138 +23,91 @@
 
     </com.google.android.material.textview.MaterialTextView>
 
+    <!--    <com.google.android.material.textview.MaterialTextView-->
+    <!--        android:id="@+id/total_sum"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:text="@string/total_text"-->
+    <!--        android:textColor="@color/dark_color"-->
+    <!--        android:textSize="14sp"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/total_tv"-->
+    <!--        tools:ignore="MissingConstraints" />-->
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/icon_dollar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/dollar_text_icon"
+        android:textColor="@color/gray_color"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toStartOf="@+id/total_tv"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/total_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="134"
+        android:textColor="@color/dark_color"
+        android:textSize="45sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.082"
+        tools:ignore="MissingConstraints">
+
+    </com.google.android.material.textview.MaterialTextView>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/my_subscribe"
+        android:textColor="@color/dark_color"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/recycler"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints">
+
+    </com.google.android.material.textview.MaterialTextView>
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_add"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/button_add"
+        app:cornerRadius="15dp"
+        app:icon="@drawable/ic_add"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/total_tv"
+        tools:ignore="MissingConstraints">
+
+    </com.google.android.material.button.MaterialButton>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="90dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="300dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
         tools:listitem="@layout/item_rv" />
-
-
-    <!--    <androidx.coordinatorlayout.widget.CoordinatorLayout-->
-<!--        android:id="@+id/cordinator"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="match_parent"-->
-<!--        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintHorizontal_bias="0.0"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toTopOf="@+id/recycler"-->
-<!--        app:layout_constraintVertical_bias="0.393"-->
-<!--        tools:context=".MainActivity">-->
-
-<!--        <androidx.constraintlayout.widget.ConstraintLayout-->
-<!--            android:id="@+id/constraintLayout"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:background="@color/white"-->
-<!--            android:backgroundTint="@color/white"-->
-<!--            app:behavior_hideable="true"-->
-<!--            app:behavior_peekHeight="100dp"-->
-<!--            app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">-->
-
-
-<!--            <View-->
-<!--                android:id="@+id/swipe_view"-->
-<!--                android:layout_width="40dp"-->
-<!--                android:layout_height="5dp"-->
-<!--                android:layout_marginTop="24dp"-->
-<!--                android:background="@color/background_two"-->
-<!--                app:layout_constraintEnd_toEndOf="parent"-->
-<!--                app:layout_constraintStart_toStartOf="parent"-->
-<!--                app:layout_constraintTop_toTopOf="parent"-->
-<!--                tools:ignore="MissingConstraints" />-->
-
-
-<!--            <com.google.android.material.textview.MaterialTextView-->
-<!--                android:id="@+id/swipe_up_tv"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_marginTop="8dp"-->
-<!--                android:text="@string/swipe_up"-->
-<!--                android:textColor="@color/gray_color"-->
-<!--                app:layout_constraintEnd_toEndOf="parent"-->
-<!--                app:layout_constraintHorizontal_bias="0.501"-->
-<!--                app:layout_constraintStart_toStartOf="parent"-->
-<!--                app:layout_constraintTop_toBottomOf="@+id/new_sub_swipe_tv">-->
-
-
-<!--            </com.google.android.material.textview.MaterialTextView>-->
-
-<!--            <com.google.android.material.textview.MaterialTextView-->
-<!--                android:id="@+id/new_sub_swipe_tv"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_marginTop="8dp"-->
-<!--                android:text="@string/new_subscribe"-->
-<!--                android:textColor="@color/black"-->
-<!--                android:textStyle="bold"-->
-<!--                app:layout_constraintEnd_toEndOf="parent"-->
-<!--                app:layout_constraintStart_toStartOf="parent"-->
-<!--                app:layout_constraintTop_toBottomOf="@+id/swipe_view" />-->
-
-<!--            <com.google.android.material.textfield.TextInputEditText-->
-<!--                android:id="@+id/name_et"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_marginStart="16dp"-->
-<!--                android:layout_marginTop="48dp"-->
-<!--                android:hint="@string/sub_name"-->
-<!--                android:inputType="textPersonName"-->
-<!--                android:textColor="@color/gray_color"-->
-<!--                app:layout_constraintEnd_toEndOf="parent"-->
-<!--                app:layout_constraintHorizontal_bias="0.0"-->
-<!--                app:layout_constraintStart_toStartOf="parent"-->
-<!--                app:layout_constraintTop_toBottomOf="@+id/swipe_up_tv"-->
-<!--                tools:ignore="MissingConstraints" />-->
-
-<!--            <com.google.android.material.textfield.TextInputEditText-->
-<!--                android:id="@+id/desc_et"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_marginStart="16dp"-->
-<!--                android:layout_marginTop="20dp"-->
-<!--                android:hint="@string/sub_desc"-->
-<!--                android:textColor="@color/gray_color"-->
-<!--                app:layout_constraintStart_toStartOf="parent"-->
-<!--                app:layout_constraintTop_toBottomOf="@+id/name_et" />-->
-
-<!--            <com.google.android.material.textfield.TextInputEditText-->
-<!--                android:id="@+id/price_et"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_marginStart="16dp"-->
-<!--                android:layout_marginTop="20dp"-->
-<!--                android:hint="@string/sub_price"-->
-<!--                android:inputType="number"-->
-<!--                android:textColor="@color/gray_color"-->
-<!--                app:layout_constraintStart_toStartOf="parent"-->
-<!--                app:layout_constraintTop_toBottomOf="@+id/desc_et" />-->
-
-<!--            <com.google.android.material.button.MaterialButton-->
-<!--                android:id="@+id/button_add"-->
-<!--                android:layout_width="160dp"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_marginTop="72dp"-->
-<!--                android:backgroundTint="@color/dark_color"-->
-<!--                android:text="@string/button_add"-->
-<!--                android:textColor="@color/background_two"-->
-<!--                app:cornerRadius="15dp"-->
-<!--                app:layout_constraintEnd_toEndOf="parent"-->
-<!--                app:layout_constraintHorizontal_bias="0.497"-->
-<!--                app:layout_constraintStart_toStartOf="parent"-->
-<!--                app:layout_constraintTop_toBottomOf="@+id/price_et" />-->
-<!--        </androidx.constraintlayout.widget.ConstraintLayout>-->
-
-
-<!--    </androidx.coordinatorlayout.widget.CoordinatorLayout>-->
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

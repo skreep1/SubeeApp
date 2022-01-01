@@ -11,12 +11,12 @@
         android:id="@+id/app_name_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="36dp"
         android:text="@string/app_name"
         android:textColor="@color/dark_color"
         android:textSize="18sp"
         android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints">
@@ -48,6 +48,7 @@
         android:layout_marginTop="284dp"
         android:hint="@string/sub_name"
         android:inputType="textPersonName"
+        android:minHeight="48dp"
         android:textColor="@color/gray_color"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -60,6 +61,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="20dp"
         android:hint="@string/sub_desc"
+        android:minHeight="48dp"
         android:textColor="@color/gray_color"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/updateName_et" />
@@ -72,6 +74,7 @@
         android:layout_marginTop="20dp"
         android:hint="@string/sub_price"
         android:inputType="number"
+        android:minHeight="48dp"
         android:textColor="@color/gray_color"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/updateDesc_et" />
@@ -85,7 +88,7 @@
         android:layout_marginEnd="32dp"
         android:backgroundTint="@color/dark_color"
         android:text="@string/button_update"
-        android:textColor="@color/background_two"
+        android:textColor="@color/white"
         app:cornerRadius="15dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -95,7 +98,7 @@
         android:id="@+id/button_delete"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="16dp"
         android:backgroundTint="@color/red_color"
         android:text="@string/button_delete"
         android:textColor="@color/white"
@@ -104,6 +107,19 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button_update" />
+
+    <ImageView
+        android:id="@+id/button_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="36dp"
+        android:src="@drawable/ic_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints">
+
+    </ImageView>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

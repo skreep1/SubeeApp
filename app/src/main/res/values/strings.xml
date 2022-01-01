@@ -15,6 +15,11 @@
     <string name="text_welcome">Добро пожаловать!</string>
     <string name="text_description_start">Легко управляйте своими подписками на сервисы</string>
     <string name="button_cancel_text">Отменить</string>
+    <string name="text_floating">Текст</string>
+    <string name="dollar_text_icon">$</string>
+    <string name="total_text">Расходы</string>
+    <string name="my_subscribe">Мои подписки</string>
+
 
 
 </resources>

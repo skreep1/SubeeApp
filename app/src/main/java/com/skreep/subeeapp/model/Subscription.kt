@@ -5,12 +5,12 @@ import androidx.room.PrimaryKey
 import kotlinx.android.parcel.Parcelize
 
 @Parcelize
-@Entity(tableName = "subscription_table")
+@Entity(tableName = "table_my_sub")
 data class Subscription(
     @PrimaryKey(autoGenerate = true)
     val id: Int,
     val nameSub: String,
     val descSub: String,
-    val priceSub: String,
+    val priceSub: Double,
 
     ) : Parcelable

@@ -15,6 +15,9 @@ import com.skreep.subeeapp.model.Subscription
 import com.skreep.subeeapp.viewmodel.SubViewModel
 
 
+private const val SUBSCRIBE_ADD = "Подписка добавлена"
+private const val ERROR_FIELDS = "Заполните все поля"
+
 class AddFragment : Fragment() {
 
     private var _binding: FragmentAddBinding? = null
@@ -27,7 +30,7 @@ class AddFragment : Fragment() {
         savedInstanceState: Bundle?,
     ): View? {
 
-        _binding = FragmentAddBinding.inflate(inflater, container,false)
+        _binding = FragmentAddBinding.inflate(inflater, container, false)
         val view = binding.root
 
         mSubViewModel = ViewModelProvider(this).get(SubViewModel::class.java)
@@ -36,7 +39,7 @@ class AddFragment : Fragment() {
             insertDataToDatabase()
         }
 
-        binding.buttonCancel.setOnClickListener {
+        binding.buttonBack.setOnClickListener {
             findNavController().navigate(R.id.action_addFragment_to_listFragment)
         }
 
@@ -46,7 +49,7 @@ class AddFragment : Fragment() {
     private fun insertDataToDatabase() {
         val name = binding.nameEt.text.toString()
         val desc = binding.descEt.text.toString()
-        val price = binding.priceEt.text.toString()
+        val price = binding.priceEt.text.toString().toDouble()
 
         if (inputCheck(name, desc, price)) {
 
@@ -56,17 +59,17 @@ class AddFragment : Fragment() {
             //добавление в БД
             mSubViewModel.addSub(sub)
 
-            Toast.makeText(requireContext(), "Подписка добавлена", Toast.LENGTH_LONG).show()
+            Toast.makeText(requireContext(), SUBSCRIBE_ADD, Toast.LENGTH_LONG).show()
             //кнопка назад
             findNavController().navigate(R.id.action_addFragment_to_listFragment)
 
         } else {
-            Toast.makeText(requireContext(), "Заполните все поля", Toast.LENGTH_LONG).show()
+            Toast.makeText(requireContext(), ERROR_FIELDS, Toast.LENGTH_LONG).show()
         }
     }
 
-    private fun inputCheck(name: String, desc: String, price: String): Boolean {
-        return !(TextUtils.isEmpty(name) && TextUtils.isEmpty(desc) && price.isEmpty())
+    private fun inputCheck(name: String, desc: String, price: Double): Boolean {
+        return !(TextUtils.isEmpty(name) && TextUtils.isEmpty(desc) && price.toString().isEmpty())
     }
 
 }

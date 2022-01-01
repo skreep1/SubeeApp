@@ -15,6 +15,10 @@
     <string name="text_welcome">Welcome!</string>
     <string name="text_description_start">Easily manage your service subscriptions</string>
     <string name="button_cancel_text">Cancel</string>
+    <string name="text_floating">Text</string>
+    <string name="dollar_text_icon">$</string>
+    <string name="total_text">Total balance of subscription expenses</string>
+    <string name="my_subscribe">My subscribe</string>
 
 
 

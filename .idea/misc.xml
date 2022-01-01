@@ -5,6 +5,7 @@
       <map>
         <entry key="..\:/Users/Maks/AndroidStudioProjects/SubeeApp2.0/app/src/main/res/drawable/bottom_sheet_background.xml" value="0.2890625" />
         <entry key="..\:/Users/Maks/AndroidStudioProjects/SubeeApp2.0/app/src/main/res/drawable/ic_add.xml" value="0.2846153846153846" />
+        <entry key="..\:/Users/Maks/AndroidStudioProjects/SubeeApp2.0/app/src/main/res/drawable/ic_back.xml" value="0.2212962962962963" />
         <entry key="..\:/Users/Maks/AndroidStudioProjects/SubeeApp2.0/app/src/main/res/drawable/ic_delete.xml" value="0.27870370370370373" />
         <entry key="..\:/Users/Maks/AndroidStudioProjects/SubeeApp2.0/app/src/main/res/layout/activity_main.xml" value="0.2" />
         <entry key="..\:/Users/Maks/AndroidStudioProjects/SubeeApp2.0/app/src/main/res/layout/activity_test.xml" value="0.1" />
@@ -15,7 +16,7 @@
         <entry key="..\:/Users/Maks/AndroidStudioProjects/SubeeApp2.0/app/src/main/res/layout/fragment_login.xml" value="0.22282608695652173" />
         <entry key="..\:/Users/Maks/AndroidStudioProjects/SubeeApp2.0/app/src/main/res/layout/fragment_update.xml" value="0.22" />
         <entry key="..\:/Users/Maks/AndroidStudioProjects/SubeeApp2.0/app/src/main/res/layout/item_bottom.xml" value="0.25885416666666666" />
-        <entry key="..\:/Users/Maks/AndroidStudioProjects/SubeeApp2.0/app/src/main/res/layout/item_rv.xml" value="0.22" />
+        <entry key="..\:/Users/Maks/AndroidStudioProjects/SubeeApp2.0/app/src/main/res/layout/item_rv.xml" value="0.25" />
         <entry key="..\:/Users/Maks/AndroidStudioProjects/SubeeApp2.0/app/src/main/res/menu/delete_menu.xml" value="0.27291666666666664" />
       </map>
     </option>

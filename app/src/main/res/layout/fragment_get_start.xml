@@ -63,7 +63,7 @@
         android:backgroundTint="@color/dark_color"
         android:text="@string/button_get"
         android:drawableRight="@drawable/ic_arrow_right"
-        android:textColor="@color/background_two"
+        android:textColor="@color/white"
         app:cornerRadius="15dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

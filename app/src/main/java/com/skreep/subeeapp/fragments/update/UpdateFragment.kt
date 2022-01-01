@@ -10,11 +10,15 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.skreep.subeeapp.R
-import com.skreep.subeeapp.databinding.FragmentAddBinding
 import com.skreep.subeeapp.databinding.FragmentUpdateBinding
 import com.skreep.subeeapp.model.Subscription
 import com.skreep.subeeapp.viewmodel.SubViewModel
 
+
+private const val UPDATE_TEXT = "Обновленно"
+private const val ERROR_FIELDS = "Заполните все поля"
+private const val YES_ALERT = "Да"
+private const val NO_ALERT = "Нет"
 
 class UpdateFragment : Fragment() {
 
@@ -27,16 +31,20 @@ class UpdateFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?,
     ): View? {
-        // Inflate the layout for this fragment
+
         _binding = FragmentUpdateBinding.inflate(inflater, container, false)
         val view = binding.root
 
         mSubViewModel = ViewModelProvider(this).get(SubViewModel::class.java)
 
+        binding.buttonBack.setOnClickListener {
+            findNavController().navigate(R.id.action_updateFragment_to_listFragment)
+        }
+
         with(binding) {
             updateNameEt.setText(args.currentSub.nameSub)
             updateDescEt.setText(args.currentSub.descSub)
-            updatePriceEt.setText(args.currentSub.priceSub)
+            updatePriceEt.setText(args.currentSub.priceSub.toString())
 
             buttonUpdate.setOnClickListener {
                 updateSub()
@@ -46,67 +54,47 @@ class UpdateFragment : Fragment() {
             }
         }
 
-        //добавлени меню
-        setHasOptionsMenu(true)
-
         return view
     }
-
-    /** Функция для обновления подписок в БД */
 
     private fun updateSub() {
         val nameSub = binding.updateNameEt.text.toString()
         val descSub = binding.updateDescEt.text.toString()
-        val priceSub = binding.updatePriceEt.text.toString()
+        val priceSub = binding.updatePriceEt.text.toString().toDouble()
 
-        if (inputCheck(nameSub, descSub, priceSub)) {
-            //добавление обьекта
+        if (inputCheck(nameSub, descSub, priceSub.toString().toDouble())) {
 
-            val updateSub = Subscription(args.currentSub.id, nameSub, descSub, priceSub)
+            val updateSub =
+                Subscription(args.currentSub.id, nameSub, descSub, priceSub.toString().toDouble())
 
-            //обновление текущего Sub
             mSubViewModel.updateSub(updateSub)
 
-            Toast.makeText(requireContext(), "Обновленно", Toast.LENGTH_SHORT).show()
-            //Навигация назад
+            Toast.makeText(requireContext(), UPDATE_TEXT, Toast.LENGTH_SHORT).show()
             findNavController().navigate(R.id.action_updateFragment_to_listFragment)
 
         } else {
-            Toast.makeText(requireContext(), "Заполните все поля", Toast.LENGTH_SHORT).show()
+            Toast.makeText(requireContext(), ERROR_FIELDS, Toast.LENGTH_SHORT).show()
         }
 
     }
 
-    private fun inputCheck(name: String, desc: String, price: String): Boolean {
-        return !(TextUtils.isEmpty(name) && TextUtils.isEmpty(desc) && price.isEmpty())
-    }
-
-    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
-        inflater.inflate(R.menu.delete_menu, menu)
-    }
-
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        if (item.itemId == R.id.delete_menu) {
-            deleteSub()
-        }
-
-        return super.onOptionsItemSelected(item)
+    private fun inputCheck(name: String, desc: String, price: Double): Boolean {
+        return !(TextUtils.isEmpty(name) && TextUtils.isEmpty(desc) && price.toString().isEmpty())
     }
 
 
     private fun deleteSub() {
         val builder = AlertDialog.Builder(requireContext())
-        builder.setPositiveButton("Да") { _, _ ->
+        builder.setPositiveButton(YES_ALERT) { _, _ ->
             mSubViewModel.deleteSub(args.currentSub)
             Toast.makeText(
-                requireContext(),
-                "Вы удалили: ${args.currentSub.nameSub}",
+                requireContext(), "Вы удалили: ${args.currentSub.nameSub}",
                 Toast.LENGTH_SHORT
             ).show()
             findNavController().navigate(R.id.action_updateFragment_to_listFragment)
 
         }
-        builder.setNegativeButton("Нет") { _, _ -> }
+        builder.setNegativeButton(NO_ALERT) { _, _ -> }
         builder.setTitle("Удалить ${args.currentSub.nameSub}?")
         builder.setMessage("Вы уверены, что хотите удалить ${args.currentSub.nameSub}")
         builder.create().show()

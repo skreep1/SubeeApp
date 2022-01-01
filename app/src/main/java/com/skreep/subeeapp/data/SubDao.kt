@@ -19,10 +19,10 @@ interface SubDao {
         @Delete
         suspend fun deleteSub(subscription: Subscription)
 
-        @Query("DELETE FROM subscription_table")
+        @Query("DELETE FROM table_my_sub ")
         suspend fun deleteAllSub()
 
         //запрос
-        @Query("SELECT * FROM subscription_table ORDER BY id ASC")
+        @Query("SELECT * FROM table_my_sub ORDER BY id ASC")
         fun readAllData() : LiveData<List<Subscription>>
     }
