@@ -1,6 +1,6 @@
 # Subee App for Android
 
-![Alt Text](https://github.com/skreep1/SubeeApp/blob/master/postmain.png)
+![Alt Text](https://github.com/skreep1/SubeeApp/blob/master/subee%20main.png)
 
 # Описание
 <b>Subee</b> - удобное мобильное приложение с помощью которого вы можете легко управлять своими подписками на сервисы. Главная цель проекта не только упростить жизнь пользователям, но и ознакомиться с новыми технологиями для разработки мобильных приложений.
@@ -12,6 +12,7 @@
 - Добавлять новые подписки
 - Обновлять подписки
 - Удалять подписки
+
 
 
 # Используемые технологии
@@ -28,5 +29,3 @@
 1. [Instagram](http://instagram.com/skreep1/ "Instagram") 
 2. [Linkedin](https://www.linkedin.com/in/skreep/ "Linkedin")
 
-# Дополнительные скриншоты
-![Alt Text](https://github.com/skreep1/SubeeApp/blob/master/screen.png)
