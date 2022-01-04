@@ -21,6 +21,7 @@
 - Room
 - Android Architecture Components (Navigation, LiveData, View Model)
 - MVVM
+- ViewBinding
 - Coroutines
 - Figma (design)
 
