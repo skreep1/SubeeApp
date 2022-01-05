@@ -5,6 +5,9 @@
 # Description
 <b>Subee</b> - convenient mobile application with which you can easily manage your subscriptions to services. The main goal of the project is not only to make life easier for users, but also to get acquainted with new technologies for developing mobile applications.
 
+- [Download Google Play](https://play.google.com/store/apps/details?id=com.skreep.subeeapp "Download Google Play")
+
+
 # Subee 2.0. What has been added and fixed?
 The new version of the application has an updated design, new technologies and features have been added.
 
